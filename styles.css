@@ -252,3 +252,262 @@ body {
   z-index: 2;
   transform: translate(18px, -18px);
 }
+/* --- Global Styles & Variables --- */
+:root {
+  /* TODO 1: Brand Colors */
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --muted: #6b7280;        
+  --bg: #f6f7fb;           
+  --card: #ffffff;         
+}
+
+/* TODO 1: Box-sizing reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: #111827;
+}
+
+/* --- Layout Elements --- */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  /* TODO 2: Subtle background */
+  background-color: var(--card);
+}
+
+/* TODO 2: Muted tagline */
+.tagline {
+  color: var(--muted);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-block: 1rem;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+}
+
+/* --- Featured Event (Section 1) --- */
+/* TODO 3: Color Note & Muted text */
+.color-demo .color-note {
+  color: var(--brand);
+  font-weight: bold;
+}
+
+.color-demo .muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* TODO 3: Gradient background sample */
+.bg-sample {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  margin-block: 0.75rem;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(135deg, var(--brand), #22c55e);
+}
+
+/* TODO 4: Inline labels */
+.inline-label {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.inline-label.alt {
+  border-style: dashed;
+}
+
+/* --- Event Details (Section 2) --- */
+/* TODO 5: Typography */
+.copy .title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.copy .intro {
+  font-style: italic;
+  line-height: 1.7;
+  margin-top: 0.25rem;
+}
+
+.copy .sample-text {
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1em;
+}
+
+.cta-link {
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* --- Quick Stats (Section 3) --- */
+.box-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.box {
+  width: 120px;
+  height: 80px;
+  padding: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.b1 { background: rgba(37, 99, 235, 0.12); border-color: rgba(37, 99, 235, 0.5); }
+.b2 { background: rgba(34, 197, 94, 0.12); border-color: rgba(34, 197, 94, 0.5); }
+.b3 { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.55); }
+
+/* --- Browse Categories (Section 4) --- */
+/* TODO 6: Toolbar Flexbox */
+.toolbar {
+  padding: 0.5rem;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* TODO 6: Button styles */
+.btn {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f3f4f6;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--brand-dark);
+  color: white;
+}
+
+/* TODO 6: Product Grid Flex */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.product-grid .item {
+  flex: 1 1 140px;
+  min-height: 90px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* --- Locations & Alerts (Section 5) --- */
+/* TODO 7: Static Box */
+.static-box {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.position-stage {
+  position: relative;
+  padding: 2rem;
+  min-height: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.relative-box {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.12);
+  margin-bottom: 0.75rem;
+}
+
+.absolute-parent {
+  position: relative;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.12);
+  margin-top: 0.5rem;
+}
+
+.absolute-child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+.fixed-badge {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.85);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.stack {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.stack.a {
+  background: rgba(245, 158, 11, 0.7);
+  z-index: 1;
+}
+
+.stack.b {
+  background: rgba(37, 99, 235, 0.7);
+  z-index: 2;
+  transform: translate(18px, -18px);
+}
